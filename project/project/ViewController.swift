@@ -14,11 +14,15 @@ import AVFoundation
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     @IBOutlet weak var identifierLabel: UILabel!
+    var previousLabel = ""
+    var teller = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         camera()
+        self.view.bringSubviewToFront(identifierLabel)
+        
     }
     
     func camera() {
@@ -52,13 +56,24 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         synthesizer.speak(utterance)
     }
     
+    func checkLabel() {
+        if (previousLabel == identifierLabel.text) {
+            print("labels are the same")
+        } else {
+            previousLabel = identifierLabel.text!
+            speak()
+        }
+    }
+    
     //deze functie wordt opgeroepen elke keer als er een frame opgevangen is
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        
+        teller+=1;
         
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
         // CoreML model
-        guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { return }
+        guard let model = try? VNCoreMLModel(for: Resnet50().model) else { return }
         
         //request van model
         let request = VNCoreMLRequest(model: model) { (finishedReq, err) in
@@ -70,8 +85,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             print(firstObservation.identifier, firstObservation.confidence)
             
             DispatchQueue.main.async {
-                self.identifierLabel.text = "\(firstObservation.identifier)";
-                self.speak()
+                
+                if(self.teller % 24 == 0){
+                    self.identifierLabel.text = "\(firstObservation.identifier)";
+                    self.checkLabel()
+                }
+                
             }
         }
         // analyseer de frame
