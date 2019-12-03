@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import Vision
+import AVFoundation
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
@@ -42,6 +43,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         captureSession.addOutput(dataOutput)
     }
     
+    func speak() {
+        let utterance = AVSpeechUtterance(string: identifierLabel.text!)
+        utterance.voice = AVSpeechSynthesisVoice(language: "nl-BE")
+        utterance.rate = 0.5
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+    }
+    
     //deze functie wordt opgeroepen elke keer als er een frame opgevangen is
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
@@ -60,7 +70,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             print(firstObservation.identifier, firstObservation.confidence)
             
             DispatchQueue.main.async {
-                self.identifierLabel.text = "\(firstObservation.identifier)"
+                self.identifierLabel.text = "\(firstObservation.identifier)";
+                self.speak()
             }
         }
         // analyseer de frame
