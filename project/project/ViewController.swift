@@ -51,6 +51,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let utterance = AVSpeechUtterance(string: identifierLabel.text!)
         utterance.voice = AVSpeechSynthesisVoice(language: "nl-BE")
         utterance.rate = 0.5
+        utterance.pitchMultiplier = 1.5
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)

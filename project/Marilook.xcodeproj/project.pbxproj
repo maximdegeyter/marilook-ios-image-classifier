@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		94BF32B32395DBF400B7748A /* project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94BF32B32395DBF400B7748A /* Marilook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marilook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF32B62395DBF500B7748A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94BF32B82395DBF500B7748A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		94BF32BA2395DBF500B7748A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		94BF32B42395DBF400B7748A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94BF32B32395DBF400B7748A /* project.app */,
+				94BF32B32395DBF400B7748A /* Marilook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		94BF32B22395DBF400B7748A /* project */ = {
+		94BF32B22395DBF400B7748A /* Marilook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94BF32C72395DBF600B7748A /* Build configuration list for PBXNativeTarget "project" */;
+			buildConfigurationList = 94BF32C72395DBF600B7748A /* Build configuration list for PBXNativeTarget "Marilook" */;
 			buildPhases = (
 				94BF32AF2395DBF400B7748A /* Sources */,
 				94BF32B02395DBF400B7748A /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = project;
+			name = Marilook;
 			productName = project;
-			productReference = 94BF32B32395DBF400B7748A /* project.app */;
+			productReference = 94BF32B32395DBF400B7748A /* Marilook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 94BF32AE2395DBF400B7748A /* Build configuration list for PBXProject "project" */;
+			buildConfigurationList = 94BF32AE2395DBF400B7748A /* Build configuration list for PBXProject "Marilook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94BF32B22395DBF400B7748A /* project */,
+				94BF32B22395DBF400B7748A /* Marilook */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94BF32AE2395DBF400B7748A /* Build configuration list for PBXProject "project" */ = {
+		94BF32AE2395DBF400B7748A /* Build configuration list for PBXProject "Marilook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94BF32C52395DBF600B7748A /* Debug */,
@@ -336,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94BF32C72395DBF600B7748A /* Build configuration list for PBXNativeTarget "project" */ = {
+		94BF32C72395DBF600B7748A /* Build configuration list for PBXNativeTarget "Marilook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94BF32C82395DBF600B7748A /* Debug */,
