@@ -15,23 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-Tr-5fj">
-                                <rect key="frame" x="20" y="833" width="374" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qom-G8-Tqs" userLabel="labelView">
+                                <rect key="frame" x="16" y="774" width="382" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus op een object" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-Tr-5fj" userLabel="identifierLabel">
+                                        <rect key="frame" x="4" y="15" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hPL-Tr-5fj" secondAttribute="bottom" constant="16" id="0JU-4x-lYa"/>
+                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="leading" secondItem="qom-G8-Tqs" secondAttribute="leading" constant="4" id="AbN-1A-1RU"/>
+                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="top" secondItem="qom-G8-Tqs" secondAttribute="top" constant="15" id="QAu-3M-7z3"/>
+                                    <constraint firstAttribute="trailing" secondItem="hPL-Tr-5fj" secondAttribute="trailing" constant="4" id="psX-fu-Add"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hPL-Tr-5fj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NLe-yl-gZS"/>
-                            <constraint firstItem="hPL-Tr-5fj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PJd-sZ-3Fl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hPL-Tr-5fj" secondAttribute="trailing" constant="20" id="sZ8-Rz-ILG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qom-G8-Tqs" secondAttribute="bottom" constant="24" id="GyM-br-tRv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qom-G8-Tqs" secondAttribute="trailing" constant="16" id="d0Q-Na-Ih5"/>
+                            <constraint firstItem="qom-G8-Tqs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j99-nf-bWj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="identifierLabel" destination="hPL-Tr-5fj" id="yGs-LZ-65M"/>
+                        <outlet property="labelView" destination="qom-G8-Tqs" id="lc9-fb-9Ew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -39,4 +51,5 @@
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.41176470590000003" green="0.6588235294" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -13,6 +13,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
+    @IBOutlet weak var labelView: UIView!
     @IBOutlet weak var identifierLabel: UILabel!
     var previousLabel = ""
     var teller = 0;
@@ -21,8 +22,27 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         camera()
-        self.view.bringSubviewToFront(identifierLabel)
+        self.view.bringSubviewToFront(labelView)
+
+    }
+    
+    //gradient pas toevoegen als de constraints toegevoegd zijn aan subviews
+    override func viewDidLayoutSubviews() {
+        styling()
+    }
+    
+    func styling() {
+        let gradient = CAGradientLayer()
+        let filter = CIFilter(name: "CIGaussianBlur")
+        let lightBlue = UIColor(red: 136.0/255.0, green: 234.0/255.0, blue: 253.0/255.0, alpha: 0.5)
+        let darkBlue = UIColor(red: 105.0/255.0, green: 168.0/255.0, blue: 252.0/255.0, alpha: 0.5)
         
+        gradient.cornerRadius = 12
+        gradient.frame = labelView.bounds
+        gradient.colors = [lightBlue.cgColor, darkBlue.cgColor]
+        gradient.backgroundFilters = [filter!]
+        
+        labelView.layer.insertSublayer(gradient, at: 0)
     }
     
     func camera() {
@@ -51,7 +71,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let utterance = AVSpeechUtterance(string: identifierLabel.text!)
         utterance.voice = AVSpeechSynthesisVoice(language: "nl-BE")
         utterance.rate = 0.5
-        utterance.pitchMultiplier = 1.5
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
