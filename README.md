@@ -11,6 +11,9 @@ The app shall include:
 - Text-To-Speech      => integrated in Swift
 - Translation SDK     => IBM Watson
 
+## MVP
+An app that detects objects and speaks the label out loud.
+
 ## Deliverables
 - iOS app
 - Google Colab notebook
