@@ -93,7 +93,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
         // CoreML model
-        guard let model = try? VNCoreMLModel(for: Resnet50().model) else { return }
+        guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
         
         //request van model
         let request = VNCoreMLRequest(model: model) { (finishedReq, err) in
@@ -102,12 +102,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             
             guard let firstObservation = results.first else { return }
             
-            print(firstObservation.identifier, firstObservation.confidence)
+            let word = firstObservation.identifier.split(separator: ",")
+            
+            print(word[0], firstObservation.confidence)
             
             DispatchQueue.main.async {
                 
                 if(self.teller % 24 == 0){
-                    self.identifierLabel.text = "\(firstObservation.identifier)";
+                    self.identifierLabel.text = "\(word[0])";
                     self.checkLabel()
                 }
                 

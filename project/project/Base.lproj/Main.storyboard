@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,34 +10,52 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Marilook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrB-W4-WAd">
+                                <rect key="frame" x="0.0" y="33" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.41176470590000003" green="0.6588235294" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.41176470590000003" green="0.6588235294" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.41176470590000003" green="0.6588235294" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Marilook" id="TZW-Sd-k4l"/>
+                                </items>
+                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qom-G8-Tqs" userLabel="labelView">
-                                <rect key="frame" x="16" y="774" width="382" height="64"/>
+                                <rect key="frame" x="20" y="765" width="374" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus op een object" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-Tr-5fj" userLabel="identifierLabel">
-                                        <rect key="frame" x="4" y="15" width="374" height="33"/>
+                                        <rect key="frame" x="8" y="15" width="358" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="Tb9-nu-XvM"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="hPL-Tr-5fj" secondAttribute="bottom" constant="16" id="0JU-4x-lYa"/>
-                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="leading" secondItem="qom-G8-Tqs" secondAttribute="leading" constant="4" id="AbN-1A-1RU"/>
-                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="top" secondItem="qom-G8-Tqs" secondAttribute="top" constant="15" id="QAu-3M-7z3"/>
-                                    <constraint firstAttribute="trailing" secondItem="hPL-Tr-5fj" secondAttribute="trailing" constant="4" id="psX-fu-Add"/>
+                                    <constraint firstAttribute="height" constant="64" id="CtT-cw-FLc"/>
+                                    <constraint firstAttribute="trailing" secondItem="hPL-Tr-5fj" secondAttribute="trailing" constant="8" id="HSO-GB-hGk"/>
+                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="leading" secondItem="qom-G8-Tqs" secondAttribute="leading" constant="8" id="NIO-EW-QQs"/>
+                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="top" secondItem="qom-G8-Tqs" secondAttribute="top" constant="15" id="PUV-y9-TPs"/>
+                                    <constraint firstAttribute="bottom" secondItem="hPL-Tr-5fj" secondAttribute="bottom" constant="16" id="tHe-dX-GJF"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qom-G8-Tqs" secondAttribute="bottom" constant="24" id="GyM-br-tRv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qom-G8-Tqs" secondAttribute="trailing" constant="16" id="d0Q-Na-Ih5"/>
-                            <constraint firstItem="qom-G8-Tqs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j99-nf-bWj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qom-G8-Tqs" secondAttribute="bottom" constant="33" id="RNy-AV-h4x"/>
+                            <constraint firstItem="qom-G8-Tqs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZGw-WT-YUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qom-G8-Tqs" secondAttribute="trailing" constant="20" id="jNr-hZ-AYw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
