@@ -13,6 +13,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var labelView: UIView!
     @IBOutlet weak var identifierLabel: UILabel!
     var previousLabel = ""
@@ -29,6 +30,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     //gradient pas toevoegen als de constraints toegevoegd zijn aan subviews
     override func viewDidLayoutSubviews() {
         styling()
+    }
+    
+    func setImage() {
+        let img = UIImage(named: identifierLabel.text!)
+        image.image = img
     }
     
     func styling() {
@@ -111,6 +117,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 if(self.teller % 24 == 0){
                     self.identifierLabel.text = "\(word[0])";
                     self.checkLabel()
+                    self.setImage()
                 }
                 
             }
