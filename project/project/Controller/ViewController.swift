@@ -19,12 +19,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @IBOutlet weak var identifierLabel: UILabel!
     @IBOutlet weak var btn: UIButton!
     @IBOutlet weak var questionView: UIView!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionImg: UIImageView!
     
     var previousLabel = ""
     var teller = 0;
     var audioPlayer: AVAudioPlayer?
     var objects:AllObjects?
-    var object:Object!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +74,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     func getRandomObj() {
         if questionView.isHidden == false {
-            object = objects!.list.randomElement()!
-            print(object.word)
+            let obj = objects!.list.randomElement()!
+            questionLabel.text = obj.word
+            let img = UIImage(named: obj.word)
+            questionImg.image = img
         }
     }
     
@@ -154,15 +157,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         utterance.voice = AVSpeechSynthesisVoice(language: "nl-BE")
         utterance.rate = 0.5
         
-        let path = Bundle.main.path(forResource: "success.wav", ofType: nil)
-        let url = URL(fileURLWithPath: path!)
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer!.play()
-        } catch {
-            print("couldnt load file")
-        }
+        playSound(sound: "success.wav")
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
@@ -175,9 +170,48 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             previousLabel = identifierLabel.text!
             speak()
             setImage()
+            
+            if (questionView.isHidden == false) {
+                checkAnswer()
+            }
         }
     }
     
+    func checkAnswer() {
+        if (questionLabel.text == identifierLabel.text) {
+            print("juist!")
+            playSound(sound: "correct.wav")
+            questionView.isHidden = true
+            setBtnImg()
+        } else {
+            playSound(sound: "false.wav")
+            shake()
+            print("fout!")
+        }
+    }
+    
+    func playSound(sound: String) {
+        let path = Bundle.main.path(forResource: sound, ofType: nil)
+        let url = URL(fileURLWithPath: path!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer!.play()
+        } catch {
+            print("couldnt load file")
+        }
+    }
+    
+    func shake() {
+        let ShakeAnimation = CABasicAnimation(keyPath: "position")
+        ShakeAnimation.duration = 0.07
+        ShakeAnimation.repeatCount = 5
+        ShakeAnimation.autoreverses = true
+        ShakeAnimation.fromValue = NSValue(cgPoint: CGPoint(x: image.center.x - 10, y: image.center.y))
+        ShakeAnimation.toValue = NSValue(cgPoint: CGPoint(x: image.center.x + 10, y: image.center.y))
+        image.layer.add(ShakeAnimation, forKey: "position")
+    }
+
     //deze functie wordt opgeroepen elke keer als er een frame opgevangen is
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
@@ -211,7 +245,4 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         // analyseer de frame
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
-
-
 }
-

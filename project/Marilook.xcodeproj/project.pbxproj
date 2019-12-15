@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941FAC2823A6EC3F0074B4F7 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 941FAC2723A6EC3F0074B4F7 /* correct.wav */; };
+		941FAC2A23A6F15A0074B4F7 /* false.wav in Resources */ = {isa = PBXBuildFile; fileRef = 941FAC2923A6F15A0074B4F7 /* false.wav */; };
 		94703E0723A54C95003D19D7 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */; };
 		94703E0A23A5A74E003D19D7 /* PORKYS_.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0923A5A74E003D19D7 /* PORKYS_.TTF */; };
 		94703E0D23A5B77C003D19D7 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0C23A5B77C003D19D7 /* success.wav */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		86590B3950C5A330C11098A2 /* Pods-Marilook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marilook.debug.xcconfig"; path = "Target Support Files/Pods-Marilook/Pods-Marilook.debug.xcconfig"; sourceTree = "<group>"; };
 		8F42779D089A3777C5335903 /* Pods_Marilook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marilook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		941FAC2723A6EC3F0074B4F7 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		941FAC2923A6F15A0074B4F7 /* false.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = false.wav; sourceTree = "<group>"; };
 		94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		94703E0923A5A74E003D19D7 /* PORKYS_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = PORKYS_.TTF; sourceTree = "<group>"; };
 		94703E0C23A5B77C003D19D7 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				94703E0C23A5B77C003D19D7 /* success.wav */,
+				941FAC2723A6EC3F0074B4F7 /* correct.wav */,
+				941FAC2923A6F15A0074B4F7 /* false.wav */,
 			);
 			path = sounds;
 			sourceTree = "<group>";
@@ -220,7 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941FAC2823A6EC3F0074B4F7 /* correct.wav in Resources */,
 				94BF32C32395DBF600B7748A /* LaunchScreen.storyboard in Resources */,
+				941FAC2A23A6F15A0074B4F7 /* false.wav in Resources */,
 				94703E1523A6A2C5003D19D7 /* objects.json in Resources */,
 				94BF32C02395DBF600B7748A /* Assets.xcassets in Resources */,
 				94703E0A23A5A74E003D19D7 /* PORKYS_.TTF in Resources */,

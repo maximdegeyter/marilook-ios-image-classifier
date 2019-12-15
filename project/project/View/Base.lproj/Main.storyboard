@@ -110,6 +110,8 @@
                         <outlet property="identifierLabel" destination="hPL-Tr-5fj" id="yGs-LZ-65M"/>
                         <outlet property="image" destination="OOn-Zs-qUK" id="VuA-uz-hap"/>
                         <outlet property="labelView" destination="qom-G8-Tqs" id="lc9-fb-9Ew"/>
+                        <outlet property="questionImg" destination="HxN-eX-nCg" id="C2c-rR-WY9"/>
+                        <outlet property="questionLabel" destination="LsQ-qT-AIB" id="E8I-OL-bGS"/>
                         <outlet property="questionView" destination="UkC-SJ-PHC" id="ZVx-ND-rD6"/>
                     </connections>
                 </viewController>
