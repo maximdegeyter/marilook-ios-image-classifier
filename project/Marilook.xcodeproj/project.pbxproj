@@ -16,9 +16,12 @@
 		94BF32BE2395DBF500B7748A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BF32BC2395DBF500B7748A /* Main.storyboard */; };
 		94BF32C02395DBF600B7748A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BF32BF2395DBF600B7748A /* Assets.xcassets */; };
 		94BF32C32395DBF600B7748A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BF32C12395DBF600B7748A /* LaunchScreen.storyboard */; };
+		F1D04B444ADA7FDE238CE2AD /* Pods_Marilook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F42779D089A3777C5335903 /* Pods_Marilook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86590B3950C5A330C11098A2 /* Pods-Marilook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marilook.debug.xcconfig"; path = "Target Support Files/Pods-Marilook/Pods-Marilook.debug.xcconfig"; sourceTree = "<group>"; };
+		8F42779D089A3777C5335903 /* Pods_Marilook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marilook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		94703E0923A5A74E003D19D7 /* PORKYS_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = PORKYS_.TTF; sourceTree = "<group>"; };
 		94703E0C23A5B77C003D19D7 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		94BF32BF2395DBF600B7748A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94BF32C22395DBF600B7748A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94BF32C42395DBF600B7748A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD312E7CA823F72031B9D617 /* Pods-Marilook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marilook.release.xcconfig"; path = "Target Support Files/Pods-Marilook/Pods-Marilook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D04B444ADA7FDE238CE2AD /* Pods_Marilook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,11 +64,51 @@
 			path = sounds;
 			sourceTree = "<group>";
 		};
+		94703E0E23A69ECA003D19D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94703E0F23A69ED5003D19D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94BF32BC2395DBF500B7748A /* Main.storyboard */,
+				94BF32BF2395DBF600B7748A /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94703E1023A69EEB003D19D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94BF32B62395DBF500B7748A /* AppDelegate.swift */,
+				94BF32B82395DBF500B7748A /* SceneDelegate.swift */,
+				94BF32BA2395DBF500B7748A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94703E1123A69F45003D19D7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				94BF32C12395DBF600B7748A /* LaunchScreen.storyboard */,
+				94BF32C42395DBF600B7748A /* Info.plist */,
+				94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */,
+				94703E0B23A5B76A003D19D7 /* sounds */,
+				94703E0823A5A73B003D19D7 /* font */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		94BF32AA2395DBF400B7748A = {
 			isa = PBXGroup;
 			children = (
 				94BF32B52395DBF400B7748A /* project */,
 				94BF32B42395DBF400B7748A /* Products */,
+				F45E2195C13682B9E5B3002B /* Pods */,
+				F3559729DC02B164106CBD6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,18 +123,29 @@
 		94BF32B52395DBF400B7748A /* project */ = {
 			isa = PBXGroup;
 			children = (
-				94703E0B23A5B76A003D19D7 /* sounds */,
-				94703E0823A5A73B003D19D7 /* font */,
-				94BF32B62395DBF500B7748A /* AppDelegate.swift */,
-				94BF32B82395DBF500B7748A /* SceneDelegate.swift */,
-				94BF32BA2395DBF500B7748A /* ViewController.swift */,
-				94BF32BC2395DBF500B7748A /* Main.storyboard */,
-				94BF32BF2395DBF600B7748A /* Assets.xcassets */,
-				94BF32C12395DBF600B7748A /* LaunchScreen.storyboard */,
-				94BF32C42395DBF600B7748A /* Info.plist */,
-				94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */,
+				94703E1123A69F45003D19D7 /* Support Files */,
+				94703E1023A69EEB003D19D7 /* Controller */,
+				94703E0F23A69ED5003D19D7 /* View */,
+				94703E0E23A69ECA003D19D7 /* Model */,
 			);
 			path = project;
+			sourceTree = "<group>";
+		};
+		F3559729DC02B164106CBD6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F42779D089A3777C5335903 /* Pods_Marilook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F45E2195C13682B9E5B3002B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86590B3950C5A330C11098A2 /* Pods-Marilook.debug.xcconfig */,
+				CD312E7CA823F72031B9D617 /* Pods-Marilook.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94BF32C72395DBF600B7748A /* Build configuration list for PBXNativeTarget "Marilook" */;
 			buildPhases = (
+				585949518EA1B5C8E42C642E /* [CP] Check Pods Manifest.lock */,
 				94BF32AF2395DBF400B7748A /* Sources */,
 				94BF32B02395DBF400B7748A /* Frameworks */,
 				94BF32B12395DBF400B7748A /* Resources */,
+				DEF13186EB90AFC3ACAE7334 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,6 +217,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		585949518EA1B5C8E42C642E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Marilook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF13186EB90AFC3ACAE7334 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Marilook/Pods-Marilook-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Marilook/Pods-Marilook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94BF32AF2395DBF400B7748A /* Sources */ = {
@@ -310,6 +415,7 @@
 		};
 		94BF32C82395DBF600B7748A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86590B3950C5A330C11098A2 /* Pods-Marilook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -328,6 +434,7 @@
 		};
 		94BF32C92395DBF600B7748A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD312E7CA823F72031B9D617 /* Pods-Marilook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

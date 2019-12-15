@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PORKYS_.TTF">
+            <string>Porkys</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Marilook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qom-G8-Tqs" userLabel="labelView">
+                                <rect key="frame" x="20" y="494" width="374" height="335"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OOn-Zs-qUK">
+                                        <rect key="frame" x="67" y="14.666666666666686" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="X4l-m0-hu2"/>
+                                            <constraint firstAttribute="height" constant="240" id="gMC-da-urQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus op een object" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-Tr-5fj" userLabel="identifierLabel">
+                                        <rect key="frame" x="8" y="270.66666666666663" width="358" height="48.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="Porkys" family="Porky's" pointSize="36"/>
+                                        <color key="textColor" red="0.41176470590000003" green="0.6588235294" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OOn-Zs-qUK" secondAttribute="trailing" constant="67" id="CMG-Hw-R77"/>
+                                    <constraint firstAttribute="height" constant="335" id="J57-mI-0yi"/>
+                                    <constraint firstItem="OOn-Zs-qUK" firstAttribute="leading" secondItem="qom-G8-Tqs" secondAttribute="leading" constant="67" id="SDQ-ub-KpD"/>
+                                    <constraint firstAttribute="bottom" secondItem="hPL-Tr-5fj" secondAttribute="bottom" constant="16" id="gWs-ON-zn1"/>
+                                    <constraint firstAttribute="trailing" secondItem="hPL-Tr-5fj" secondAttribute="trailing" constant="8" id="mvL-9q-ZTq"/>
+                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="leading" secondItem="qom-G8-Tqs" secondAttribute="leading" constant="8" id="ntx-rQ-b8v"/>
+                                    <constraint firstItem="hPL-Tr-5fj" firstAttribute="top" secondItem="OOn-Zs-qUK" secondAttribute="bottom" constant="16" id="tqT-uo-LiX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkC-SJ-PHC">
+                                <rect key="frame" x="16" y="92" width="382" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Appel" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-eX-nCg">
+                                        <rect key="frame" x="142" y="8" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zoek een object" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-qT-AIB">
+                                        <rect key="frame" x="125" y="106" width="124" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="qgI-02-b0Z"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLD-kf-xyP">
+                                <rect key="frame" x="350" y="92" width="48" height="48"/>
+                                <color key="backgroundColor" red="0.41176470590000003" green="0.6588235294" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="5dJ-vQ-8vR"/>
+                                    <constraint firstAttribute="height" constant="48" id="xwE-d4-yQO"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="12" minY="12" maxX="12" maxY="12"/>
+                                <state key="normal" image="Vraag">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qom-G8-Tqs" secondAttribute="bottom" constant="33" id="9DX-3J-zLN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UkC-SJ-PHC" secondAttribute="trailing" constant="16" id="Cgs-6m-nR7"/>
+                            <constraint firstItem="UkC-SJ-PHC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Uuv-QY-MgJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DLD-kf-xyP" secondAttribute="trailing" constant="16" id="X4o-gm-ohD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qom-G8-Tqs" secondAttribute="trailing" constant="20" id="eIw-Vx-v8T"/>
+                            <constraint firstItem="UkC-SJ-PHC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eaK-8w-h1I"/>
+                            <constraint firstItem="qom-G8-Tqs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fIO-wK-Y9J"/>
+                            <constraint firstItem="DLD-kf-xyP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="kvs-gC-ut8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="DLD-kf-xyP" id="hNs-rd-QQ9"/>
+                        <outlet property="identifierLabel" destination="hPL-Tr-5fj" id="yGs-LZ-65M"/>
+                        <outlet property="image" destination="OOn-Zs-qUK" id="VuA-uz-hap"/>
+                        <outlet property="labelView" destination="qom-G8-Tqs" id="lc9-fb-9Ew"/>
+                        <outlet property="questionView" destination="UkC-SJ-PHC" id="ZVx-ND-rD6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Appel" width="512" height="512"/>
+        <image name="Vraag" width="512" height="512"/>
+    </resources>
+    <color key="tintColor" red="0.41176470590000003" green="0.6588235294" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
