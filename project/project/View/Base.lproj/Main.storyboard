@@ -51,21 +51,32 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkC-SJ-PHC">
                                 <rect key="frame" x="16" y="92" width="382" height="128"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Appel" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-eX-nCg">
-                                        <rect key="frame" x="142" y="8" width="90" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zoek een object" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-qT-AIB">
-                                        <rect key="frame" x="125" y="106" width="124" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoek een object" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-qT-AIB">
+                                        <rect key="frame" x="129" y="99" width="124" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="j6I-Bo-VmO"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Appel" translatesAutoresizingMaskIntoConstraints="NO" id="HxN-eX-nCg">
+                                        <rect key="frame" x="146" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="5jE-6L-XwV"/>
+                                            <constraint firstAttribute="height" constant="90" id="efa-j8-oXl"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="HxN-eX-nCg" firstAttribute="leading" secondItem="UkC-SJ-PHC" secondAttribute="leading" constant="146" id="Jlq-8M-MnK"/>
+                                    <constraint firstAttribute="bottom" secondItem="LsQ-qT-AIB" secondAttribute="bottom" constant="8" id="OkS-1w-oLr"/>
+                                    <constraint firstItem="LsQ-qT-AIB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UkC-SJ-PHC" secondAttribute="leading" constant="129" id="XhC-k2-02i"/>
+                                    <constraint firstAttribute="trailing" secondItem="HxN-eX-nCg" secondAttribute="trailing" constant="146" id="bPr-AZ-hy9"/>
+                                    <constraint firstItem="HxN-eX-nCg" firstAttribute="top" secondItem="UkC-SJ-PHC" secondAttribute="top" id="gDI-77-Ofj"/>
                                     <constraint firstAttribute="height" constant="128" id="qgI-02-b0Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="LsQ-qT-AIB" secondAttribute="trailing" constant="129" id="rds-UL-VyE"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLD-kf-xyP">

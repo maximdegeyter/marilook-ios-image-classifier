@@ -10,6 +10,10 @@
 		94703E0723A54C95003D19D7 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */; };
 		94703E0A23A5A74E003D19D7 /* PORKYS_.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0923A5A74E003D19D7 /* PORKYS_.TTF */; };
 		94703E0D23A5B77C003D19D7 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0C23A5B77C003D19D7 /* success.wav */; };
+		94703E1323A69FD7003D19D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94703E1223A69FD7003D19D7 /* Default-568h@2x.png */; };
+		94703E1523A6A2C5003D19D7 /* objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 94703E1423A6A2C5003D19D7 /* objects.json */; };
+		94703E1723A6C569003D19D7 /* AllObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94703E1623A6C569003D19D7 /* AllObjects.swift */; };
+		94703E1923A6C592003D19D7 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94703E1823A6C592003D19D7 /* Object.swift */; };
 		94BF32B72395DBF500B7748A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF32B62395DBF500B7748A /* AppDelegate.swift */; };
 		94BF32B92395DBF500B7748A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF32B82395DBF500B7748A /* SceneDelegate.swift */; };
 		94BF32BB2395DBF500B7748A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF32BA2395DBF500B7748A /* ViewController.swift */; };
@@ -25,6 +29,10 @@
 		94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		94703E0923A5A74E003D19D7 /* PORKYS_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = PORKYS_.TTF; sourceTree = "<group>"; };
 		94703E0C23A5B77C003D19D7 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
+		94703E1223A69FD7003D19D7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		94703E1423A6A2C5003D19D7 /* objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = objects.json; sourceTree = "<group>"; };
+		94703E1623A6C569003D19D7 /* AllObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllObjects.swift; sourceTree = "<group>"; };
+		94703E1823A6C592003D19D7 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		94BF32B32395DBF400B7748A /* Marilook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marilook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF32B62395DBF500B7748A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94BF32B82395DBF500B7748A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +75,9 @@
 		94703E0E23A69ECA003D19D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94703E1423A6A2C5003D19D7 /* objects.json */,
+				94703E1623A6C569003D19D7 /* AllObjects.swift */,
+				94703E1823A6C592003D19D7 /* Object.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				94BF32C12395DBF600B7748A /* LaunchScreen.storyboard */,
-				94BF32C42395DBF600B7748A /* Info.plist */,
 				94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */,
 				94703E0B23A5B76A003D19D7 /* sounds */,
 				94703E0823A5A73B003D19D7 /* font */,
@@ -105,6 +115,7 @@
 		94BF32AA2395DBF400B7748A = {
 			isa = PBXGroup;
 			children = (
+				94703E1223A69FD7003D19D7 /* Default-568h@2x.png */,
 				94BF32B52395DBF400B7748A /* project */,
 				94BF32B42395DBF400B7748A /* Products */,
 				F45E2195C13682B9E5B3002B /* Pods */,
@@ -123,10 +134,11 @@
 		94BF32B52395DBF400B7748A /* project */ = {
 			isa = PBXGroup;
 			children = (
-				94703E1123A69F45003D19D7 /* Support Files */,
-				94703E1023A69EEB003D19D7 /* Controller */,
 				94703E0F23A69ED5003D19D7 /* View */,
 				94703E0E23A69ECA003D19D7 /* Model */,
+				94703E1023A69EEB003D19D7 /* Controller */,
+				94703E1123A69F45003D19D7 /* Support Files */,
+				94BF32C42395DBF600B7748A /* Info.plist */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -209,10 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				94BF32C32395DBF600B7748A /* LaunchScreen.storyboard in Resources */,
+				94703E1523A6A2C5003D19D7 /* objects.json in Resources */,
 				94BF32C02395DBF600B7748A /* Assets.xcassets in Resources */,
 				94703E0A23A5A74E003D19D7 /* PORKYS_.TTF in Resources */,
 				94BF32BE2395DBF500B7748A /* Main.storyboard in Resources */,
 				94703E0D23A5B77C003D19D7 /* success.wav in Resources */,
+				94703E1323A69FD7003D19D7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				94703E0723A54C95003D19D7 /* ImageClassifier.mlmodel in Sources */,
+				94703E1723A6C569003D19D7 /* AllObjects.swift in Sources */,
 				94BF32BB2395DBF500B7748A /* ViewController.swift in Sources */,
 				94BF32B72395DBF500B7748A /* AppDelegate.swift in Sources */,
+				94703E1923A6C592003D19D7 /* Object.swift in Sources */,
 				94BF32B92395DBF500B7748A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

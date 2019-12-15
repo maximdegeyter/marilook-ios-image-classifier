@@ -23,10 +23,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     var previousLabel = ""
     var teller = 0;
     var audioPlayer: AVAudioPlayer?
+    var objects:AllObjects?
+    var object:Object!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loadJSON()
         camera()
         questionView.isHidden = true
         btn.addTarget(self, action: #selector(didButtonClick), for: .touchUpInside)
@@ -40,7 +43,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @objc func didButtonClick(_ sender: UIButton) {
         questionView.isHidden = !questionView.isHidden
         setBtnImg()
-        print(questionView.isHidden)
+        getRandomObj()
     }
     
     func loadJSON() {
@@ -49,12 +52,29 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             do{
                 let data = try Data(contentsOf: path);
                 let result = try JSON(data: data);
-                //parseJSON(json: result);
+                parseJSON(json: result);
             }catch{
                 print("ERROR: JSON DATA CAN NOT BE LOADED.")
             }
         }else{
             print("ERROR: PATH TO JSON NOT CORRECT. ")
+        }
+    }
+    
+    func parseJSON(json:JSON){
+        var tempList:[Object] = []
+        for (_ ,subJSON) in json["objects"] {
+            let item:Object = Object(id: subJSON["id"].intValue, word: subJSON["word"].stringValue)
+            tempList.append(item)
+        }
+        objects = AllObjects(list: tempList)
+        print(objects!)
+    }
+    
+    func getRandomObj() {
+        if questionView.isHidden == false {
+            object = objects!.list.randomElement()!
+            print(object.word)
         }
     }
     
