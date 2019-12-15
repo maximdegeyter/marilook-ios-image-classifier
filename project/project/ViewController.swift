@@ -18,6 +18,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @IBOutlet weak var identifierLabel: UILabel!
     var previousLabel = ""
     var teller = 0;
+    var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     func setImage() {
         let img = UIImage(named: identifierLabel.text!)
         image.image = img
+        image.alpha = 0
+        image.transform = CGAffineTransform.identity.scaledBy(x: 0.8, y: 0.8)
+        
+        UIView.animate(withDuration: 0.2,
+                       delay: 0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.image.alpha = 1
+                        self.image.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1)
+                    }, completion: nil)
+        
     }
     
     func styling() {
@@ -43,12 +55,18 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let lightBlue = UIColor(red: 136.0/255.0, green: 234.0/255.0, blue: 253.0/255.0, alpha: 0.5)
         let darkBlue = UIColor(red: 105.0/255.0, green: 168.0/255.0, blue: 252.0/255.0, alpha: 0.5)
         
-        gradient.cornerRadius = 12
+        labelView.layer.cornerRadius = 12
+        
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.labelView.frame
+        self.view.insertSubview(blurEffectView, at: 1)
+        
         gradient.frame = labelView.bounds
         gradient.colors = [lightBlue.cgColor, darkBlue.cgColor]
         gradient.backgroundFilters = [filter!]
         
-        labelView.layer.insertSublayer(gradient, at: 0)
+        //labelView.layer.insertSublayer(gradient, at: 0)
     }
     
     func camera() {
@@ -78,6 +96,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         utterance.voice = AVSpeechSynthesisVoice(language: "nl-BE")
         utterance.rate = 0.5
         
+        let path = Bundle.main.path(forResource: "success.wav", ofType: nil)
+        let url = URL(fileURLWithPath: path!)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer!.play()
+        } catch {
+            print("couldnt load file")
+        }
+        
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
     }
@@ -88,6 +116,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         } else {
             previousLabel = identifierLabel.text!
             speak()
+            setImage()
         }
     }
     
@@ -117,7 +146,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 if(self.teller % 24 == 0){
                     self.identifierLabel.text = "\(word[0])";
                     self.checkLabel()
-                    self.setImage()
                 }
                 
             }

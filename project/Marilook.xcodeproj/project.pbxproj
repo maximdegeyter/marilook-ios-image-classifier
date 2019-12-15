@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		94703E0723A54C95003D19D7 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */; };
+		94703E0A23A5A74E003D19D7 /* PORKYS_.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0923A5A74E003D19D7 /* PORKYS_.TTF */; };
+		94703E0D23A5B77C003D19D7 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0C23A5B77C003D19D7 /* success.wav */; };
 		94BF32B72395DBF500B7748A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF32B62395DBF500B7748A /* AppDelegate.swift */; };
 		94BF32B92395DBF500B7748A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF32B82395DBF500B7748A /* SceneDelegate.swift */; };
 		94BF32BB2395DBF500B7748A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF32BA2395DBF500B7748A /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		94703E0923A5A74E003D19D7 /* PORKYS_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = PORKYS_.TTF; sourceTree = "<group>"; };
+		94703E0C23A5B77C003D19D7 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		94BF32B32395DBF400B7748A /* Marilook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marilook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF32B62395DBF500B7748A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94BF32B82395DBF500B7748A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94703E0823A5A73B003D19D7 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				94703E0923A5A74E003D19D7 /* PORKYS_.TTF */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		94703E0B23A5B76A003D19D7 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				94703E0C23A5B77C003D19D7 /* success.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		94BF32AA2395DBF400B7748A = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +78,8 @@
 		94BF32B52395DBF400B7748A /* project */ = {
 			isa = PBXGroup;
 			children = (
+				94703E0B23A5B76A003D19D7 /* sounds */,
+				94703E0823A5A73B003D19D7 /* font */,
 				94BF32B62395DBF500B7748A /* AppDelegate.swift */,
 				94BF32B82395DBF500B7748A /* SceneDelegate.swift */,
 				94BF32BA2395DBF500B7748A /* ViewController.swift */,
@@ -130,7 +152,9 @@
 			files = (
 				94BF32C32395DBF600B7748A /* LaunchScreen.storyboard in Resources */,
 				94BF32C02395DBF600B7748A /* Assets.xcassets in Resources */,
+				94703E0A23A5A74E003D19D7 /* PORKYS_.TTF in Resources */,
 				94BF32BE2395DBF500B7748A /* Main.storyboard in Resources */,
+				94703E0D23A5B77C003D19D7 /* success.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
