@@ -21,11 +21,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     @IBOutlet weak var questionView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionImg: UIImageView!
+    @IBAction func replaySpeak(_ sender: Any) {
+        speak()
+    }
+    
     
     var previousLabel = ""
     var teller = 0;
     var audioPlayer: AVAudioPlayer?
     var objects:AllObjects?
+    let synthesizer = AVSpeechSynthesizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +42,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     //gradient pas toevoegen als de constraints toegevoegd zijn aan subviews
-    override func viewDidLayoutSubviews() {
+    override func viewDidAppear(_ animated: Bool) {
         styling()
     }
     
@@ -103,7 +108,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         //let lightBlue = UIColor(red: 136.0/255.0, green: 234.0/255.0, blue: 253.0/255.0, alpha: 0.5)
         //let darkBlue = UIColor(red: 105.0/255.0, green: 168.0/255.0, blue: 252.0/255.0, alpha: 0.5)
         
-        let blurEffect = UIBlurEffect(style: .regular)
+        let blurEffect = UIBlurEffect(style: .light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.labelView.frame
         blurEffectView.clipsToBounds = true
@@ -122,7 +127,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     func setBtnImg() {
         if questionView.isHidden == true {
-            let openImg = UIImage(named: "Vraag.png")
+            let openImg = UIImage(named: "Ogen.png")
             btn.setImage(openImg, for: .normal)
         } else {
             let closeImg = UIImage(named: "Sluit.png")
@@ -153,13 +158,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
     
     func speak() {
+        synthesizer.stopSpeaking(at: .immediate)
         let utterance = AVSpeechUtterance(string: identifierLabel.text!)
         utterance.voice = AVSpeechSynthesisVoice(language: "nl-BE")
         utterance.rate = 0.5
+        utterance.preUtteranceDelay = 0.2
         
-        playSound(sound: "success.wav")
-        
-        let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
     }
     
@@ -168,6 +172,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             print("labels are the same")
         } else {
             previousLabel = identifierLabel.text!
+            playSound(sound: "success.wav")
             speak()
             setImage()
             
