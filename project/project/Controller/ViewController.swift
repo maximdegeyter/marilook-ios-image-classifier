@@ -225,7 +225,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
         // CoreML model
-        guard let model = try? VNCoreMLModel(for: ImageClassifier().model) else { return }
+        guard let model = try? VNCoreMLModel(for: MyImageClassifier().model) else { return }
         
         //request van model
         let request = VNCoreMLRequest(model: model) { (finishedReq, err) in

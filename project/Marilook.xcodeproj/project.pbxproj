@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		941FAC2823A6EC3F0074B4F7 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 941FAC2723A6EC3F0074B4F7 /* correct.wav */; };
 		941FAC2A23A6F15A0074B4F7 /* false.wav in Resources */ = {isa = PBXBuildFile; fileRef = 941FAC2923A6F15A0074B4F7 /* false.wav */; };
+		941FAC2C23A9031A0074B4F7 /* MyImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 941FAC2B23A9031A0074B4F7 /* MyImageClassifier.mlmodel */; };
 		94703E0723A54C95003D19D7 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */; };
 		94703E0A23A5A74E003D19D7 /* PORKYS_.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0923A5A74E003D19D7 /* PORKYS_.TTF */; };
 		94703E0D23A5B77C003D19D7 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 94703E0C23A5B77C003D19D7 /* success.wav */; };
@@ -30,6 +31,7 @@
 		8F42779D089A3777C5335903 /* Pods_Marilook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marilook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		941FAC2723A6EC3F0074B4F7 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		941FAC2923A6F15A0074B4F7 /* false.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = false.wav; sourceTree = "<group>"; };
+		941FAC2B23A9031A0074B4F7 /* MyImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MyImageClassifier.mlmodel; path = "../../../machine-learning/3_TuriCreate/MyImageClassifier.mlmodel"; sourceTree = "<group>"; };
 		94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		94703E0923A5A74E003D19D7 /* PORKYS_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = PORKYS_.TTF; sourceTree = "<group>"; };
 		94703E0C23A5B77C003D19D7 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				94BF32C12395DBF600B7748A /* LaunchScreen.storyboard */,
 				94703E0623A54C95003D19D7 /* ImageClassifier.mlmodel */,
+				941FAC2B23A9031A0074B4F7 /* MyImageClassifier.mlmodel */,
 				94703E0B23A5B76A003D19D7 /* sounds */,
 				94703E0823A5A73B003D19D7 /* font */,
 			);
@@ -294,6 +297,7 @@
 			files = (
 				94703E0723A54C95003D19D7 /* ImageClassifier.mlmodel in Sources */,
 				94703E1723A6C569003D19D7 /* AllObjects.swift in Sources */,
+				941FAC2C23A9031A0074B4F7 /* MyImageClassifier.mlmodel in Sources */,
 				94BF32BB2395DBF500B7748A /* ViewController.swift in Sources */,
 				94BF32B72395DBF500B7748A /* AppDelegate.swift in Sources */,
 				94703E1923A6C592003D19D7 /* Object.swift in Sources */,
